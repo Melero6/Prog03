@@ -1,3 +1,6 @@
+//Escribir un programa que una vez que lea un número N por teclado calcule y escriba sus
+//divisores por la pantalla (sin incluirse a si mismo).
+
 import java.util.Scanner;
 
 public class Ejercicio03 {
@@ -5,17 +8,17 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado= new Scanner(System.in);
-		int n, d;
+		int n, cont;
 		System.out.println("Escribe el valor de N:");
 		n= teclado.nextInt();
-		d=n;
+		cont=n;
 		System.out.print("Los divisores de "+n+" son: ");
-		while(d!=0)
+		while(cont!=0)
 		{
-			--d;
-			if(d!=0&&(n%d)==0)
+			--cont;
+			if(cont!=0&&(n%cont)==0)
 			{
-				System.out.print(d+" ");
+				System.out.print(cont+" ");
 			}
 		}
 	}

@@ -1,3 +1,8 @@
+//Hacer un programa que vaya leyendo números por el teclado hasta que lea el cero, que indicará
+//el fin de la entrada de datos. El programa debe calcular y escribir la suma de los números
+//introducidos en lugar par y de los introducidos en lugar impar, es decir los introducidos primero,
+//tercero, quinto, etc. y la suma de los introducidos segundo, cuarto, sexto, etc.
+
 import java.util.Scanner;
 
 public class Ejercicio06 {
@@ -5,11 +10,11 @@ public class Ejercicio06 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado= new Scanner(System.in);
-		int n, d=0, a=1, z=0;
-		
+		int n, par=0, a=1, impar=0;
+
 		System.out.println("Escribe el valor de la 1º posición");
 		n= teclado.nextInt();
-		z=z+n;
+		impar=impar+n;
 		while(n!=0)
 		{
 			++a;
@@ -17,17 +22,17 @@ public class Ejercicio06 {
 			{
 				System.out.println("Escribe el valor de la "+a+"º posición");
 				n= teclado.nextInt();
-				d=d+n;
+				par=par+n;
 			}
 			else
 			{
 				System.out.println("Escribe el valor de la "+a+"º posición");
 				n= teclado.nextInt();
-				z=z+n;
+				impar=impar+n;
 			}
 		}
-		System.out.println("La suma de numeros pares es igual a: "+d);
-		System.out.println("La suma de numeros impares es igual a: "+z);
+		System.out.println("La suma de numeros pares es igual a: "+par);
+		System.out.println("La suma de numeros impares es igual a: "+impar);
 	}
 
 }

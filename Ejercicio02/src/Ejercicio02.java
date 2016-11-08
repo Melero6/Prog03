@@ -1,3 +1,12 @@
+//Leer un número N que debe filtrarse entre 1 y 100 y a continuación calcular y escribir la tabla de
+//multiplicar de ese número con el siguiente formato:
+//TABLA DE MULTIPLICAR DE 8
+//8 * 1 = 8
+//8 * 2 = 16
+//8 * 3 = 24
+//......
+//8 * 10 = 80
+
 import java.util.Scanner;
 
 public class Ejercicio02 {
@@ -11,23 +20,13 @@ public class Ejercicio02 {
 		if (n>0&&n<=100)
 		{
 			System.out.println("TABLA DE MULTIPLICAR DE "+n);
-			System.out.println(n+" * 1 = "+n*1);
-			System.out.println(n+" * 2 = "+n*2);
-			System.out.println(n+" * 3 = "+n*3);
-			System.out.println(n+" * 4 = "+n*4);
-			System.out.println(n+" * 5 = "+n*5);
-			System.out.println(n+" * 6 = "+n*6);
-			System.out.println(n+" * 7 = "+n*7);
-			System.out.println(n+" * 8 = "+n*8);
-			System.out.println(n+" * 9 = "+n*9);
-			System.out.println(n+" * 10 = "+n*10);
+			for(int i=1;i<=10;++i)
+			{
+				System.out.println(n+" * "+i+" = "+n*i);
+			}
 		}
 		else
 			System.out.println("El valor no esta entre 1 y 100");
-			
-			
-		
-		
 	}
 
 }
