@@ -8,23 +8,30 @@ public class Ejercicio04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado= new Scanner(System.in);
-		int n, cont;
+		int n, cont,sal;
 		boolean a=false;
 		System.out.println("Escribe el valor de N:");
 		n= teclado.nextInt();
+		sal=n;
+		if(n<-1) //Para numeros negativos
+		{
+			n=((n/n-n)-1);//Asi conseguimos el positivo del negativo que introducimos Ejem: -4 = 4 ; -7 = 7
+		}	
 		cont=n-1;
 		while(cont>1)
 		{
 			if(n%cont==0)
 			{
-				System.out.println("El numero "+n+" no es primo");
+				System.out.println("El numero "+sal+" no es primo.");
 				cont=2;
 				a=true;
 			}
 			--cont;
 		}
-		if (a==false)
-			System.out.println("El numero "+n+" es primo");
+		if (n<=1&&n>=-1)
+			System.out.println("El numero "+sal+" no es primo.");
+		else if (a==false)
+			System.out.println("El numero "+sal+" es primo.");
 	}
 
 }
