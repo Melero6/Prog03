@@ -19,7 +19,12 @@ public class Ejercicio08 {
 			resu=resu*d;
 			--d;
 		}
-		System.out.println("El factorial de "+a+" es igual a: "+ resu);
+		if (a<0)
+			System.out.println("El numero no puede ser negativo.");
+		else if (a==0)
+			System.out.println("El factorial de "+a+" es igual a: 1.");
+		else
+			System.out.println("El factorial de "+a+" es igual a: "+ resu);
 	}
 
 }
