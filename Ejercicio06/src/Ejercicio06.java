@@ -18,18 +18,12 @@ public class Ejercicio06 {
 		while(n!=0)
 		{
 			++a;
+			System.out.println("Escribe el valor de la "+a+"º posición");
+			n = teclado.nextInt();
 			if(a%2==0)
-			{
-				System.out.println("Escribe el valor de la "+a+"º posición");
-				n= teclado.nextInt();
 				par=par+n;
-			}
 			else
-			{
-				System.out.println("Escribe el valor de la "+a+"º posición");
-				n= teclado.nextInt();
 				impar=impar+n;
-			}
 		}
 		System.out.println("La suma de numeros pares es igual a: "+par);
 		System.out.println("La suma de numeros impares es igual a: "+impar);
