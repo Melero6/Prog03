@@ -13,7 +13,7 @@ public class Ejercicio10 {
 		n= teclado.nextInt();
 		n=n+1;
 		if (n<=2&&n>=-1)
-			n=3;
+			n=2;
 		
 		cont=n-1;
 		while(cont>1)
