@@ -8,23 +8,23 @@ public class Ejercicio08 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado= new Scanner(System.in);
-		long a,resu,d;
-		d=0;
-		System.out.println("Escribe el valor de A");
-		a= teclado.nextInt();
-		d=a-1;
-		resu=a;
-		while (d>0)
-		{
-			resu=resu*d;
-			--d;
-		}
-		if (a<0)
+		long resultado;
+		int entrada;
+
+		System.out.println("Escribe el numero para calcular su factorial (Ten en cuenta que no puedes calcular el factorial de un numero superior a 20 con este programa).");
+		entrada= teclado.nextInt();
+		resultado=entrada;
+
+		for (int i=entrada-1;i>0;i--)
+			resultado=resultado*i;
+
+		
+		if (entrada<0)
 			System.out.println("El numero no puede ser negativo.");
-		else if (a==0)
-			System.out.println("El factorial de "+a+" es igual a: 1.");
+		else if (entrada==0)
+			System.out.println("El factorial de "+entrada+" es igual a: 1");
 		else
-			System.out.println("El factorial de "+a+" es igual a: "+ resu);
+			System.out.println(entrada>20?"La entrada es mayor a 20, asi que "+resultado+" no es un resultado correcto.":"El factorial de "+entrada+" es igual a: "+ resultado);
 	}
 
 }

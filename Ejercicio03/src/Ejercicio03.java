@@ -8,18 +8,16 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado= new Scanner(System.in);
-		int n, cont;
-		System.out.println("Escribe el valor de N:");
-		n= teclado.nextInt();
-		cont=n;
-		System.out.print("Los divisores de "+n+" son: ");
-		while(cont!=0)
-		{
-			--cont;
-			if(cont!=0&&(n%cont)==0)
-			{
-				System.out.print(cont+" ");
-			}
-		}
+		int entrada;
+		System.out.println("Escribe un numero para calcular sus divisores:");
+		entrada= teclado.nextInt();
+
+		System.out.print("Los divisores de "+entrada+" (sin incluirse) son: ");
+		
+		for(int i=entrada-1;i>0;i--)
+			if(entrada%i==0)
+				System.out.print(i+" ");
+		
+		
 	}
 }

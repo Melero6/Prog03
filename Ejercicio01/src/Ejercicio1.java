@@ -8,26 +8,24 @@ public class Ejercicio1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		Scanner teclado= new Scanner(System.in);
-		int a,b,resu;
-		resu=0;
-		System.out.println("Escribe el valor de A");
-		a= teclado.nextInt();
-		System.out.println("Escribe el valor de B");
-		b= teclado.nextInt();
-		int cont=1+a;
-		if(a<b){
-			while(cont<=b-1)
-			{	
-				resu = resu + cont;
-				++cont;
-			}
-		} 
-		else
-			System.out.println("A no es menor que B");
+		int a,b,resultado=0;
 
-		System.out.println("El valor es: " +resu);
+		System.out.println("Escribe el valor de A:");
+		a= teclado.nextInt();
+		System.out.println("Escribe el valor de B:");
+		b= teclado.nextInt();
+
+		if(a<b){
+			for(int i=a+1;i<b;i++)	
+				resultado+=i;
+			
+			System.out.println("El resultado es: " +resultado);
+		}
+		
+		else
+			System.out.println("ERROR: A no es menor que B.");
+
 	}
 
 }

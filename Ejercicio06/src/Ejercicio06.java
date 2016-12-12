@@ -10,21 +10,19 @@ public class Ejercicio06 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado= new Scanner(System.in);
-		int n, par=0, a=1, impar=0;
+		int entrada, par=0, posicionEntrada=1, impar=0;
 
-		System.out.println("Escribe el valor de la 1º posición");
-		n= teclado.nextInt();
-		impar=impar+n;
-		while(n!=0)
-		{
-			++a;
-			System.out.println("Escribe el valor de la "+a+"º posición");
-			n = teclado.nextInt();
-			if(a%2==0)
-				par=par+n;
+		do{
+			System.out.println("Escribe el valor de la "+posicionEntrada+"º posición");
+			++posicionEntrada;
+			entrada = teclado.nextInt();
+			
+			if(posicionEntrada%2==0)
+				par+=entrada;
 			else
-				impar=impar+n;
-		}
+				impar+=entrada;
+		}while(entrada!=0);
+		
 		System.out.println("La suma de numeros pares es igual a: "+par);
 		System.out.println("La suma de numeros impares es igual a: "+impar);
 	}
