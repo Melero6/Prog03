@@ -23,7 +23,6 @@ public class Ejercicio09 {
 		if (resu==n)
 			System.out.print(" es perfecto.");
 		else
-			System.out.print(" no es perfecto.");
-			
+			System.out.print(" no es perfecto.");	
 	}
 }
